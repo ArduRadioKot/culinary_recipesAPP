@@ -4,6 +4,6 @@ QWidget {
 }
 
 QLabel {
-    color: blue;
+    color: red;
     font-size: 20px;
 }
