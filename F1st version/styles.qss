@@ -1,0 +1,9 @@
+QWidget {
+    background-color: #f0f0f0;
+    font-family: Arial;
+}
+
+QLabel {
+    color: blue;
+    font-size: 20px;
+}
