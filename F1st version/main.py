@@ -62,7 +62,7 @@ class MainWindow(QWidget):
         self.setLayout(main_layout)
 
         # Загрузка файл стилей
-        with open("style.qss", "r") as f:
+        with open("/Users/aleksandrvorobev/Documents/Visot/culinary_recipesAPP/F1st version/styles.qss", "r") as f:
             self.setStyleSheet(f.read())
 
 if __name__ == "__main__":
