@@ -15,7 +15,7 @@ class MainWindow(QWidget):
         # Заголовок
         header_layout = QHBoxLayout()
         header_image = QLabel()
-        header_image.setPixmap(QPixmap("images/Rectangle 2.png").scaled(800, 100, Qt.KeepAspectRatio))
+        header_image.setPixmap(QPixmap("WebApp/images/Rectangle 2.png").scaled(800, 100, Qt.KeepAspectRatio))
         header_layout.addWidget(header_image)
 
         # Кнопки в заголовке
@@ -30,22 +30,35 @@ class MainWindow(QWidget):
         food_day_group = QGroupBox("Блюдо дня")
         food_day_layout = QVBoxLayout()
 
+        # QLabel для изображения
         food_image = QLabel()
-        food_image.setPixmap(QPixmap("images/Rectangle 4.png").scaled(400, 200, Qt.KeepAspectRatio))
-        food_text = QLabel("k.lj lyf ,k.lj lyz ,k.lj lyz")
-        food_button = QPushButton("Готовить")
+        food_image.setPixmap(QPixmap("WebApp/images/Rectangle 4.png").scaled(400, 200, Qt.KeepAspectRatio))
+        food_image.setScaledContents(True)  # Изображение будет масштабироваться
+
+        # QLabel для текста
+        food_text = QLabel("Блюдо дня")
+        food_text.setStyleSheet("color: white; font-size: 20px; text-align: center;")
+        food_text.setAlignment(Qt.AlignCenter)  # Центрирование текста
+
+        # Установка абсолютного позиционирования
+        food_image.setFixedSize(400, 200)  # Устанавливаем фиксированный размер для QLabel с изображением
+        food_text.setGeometry(0, 0, 400, 200)  # Устанавливаем геометрию для текста
+
+        # Создаем контейнер для изображения и текста
+        overlay = QWidget(food_image)
+        overlay.setGeometry(0, 0, 400, 200)  # Устанавливаем размеры контейнера
+        overlay_layout = QVBoxLayout(overlay)
+        overlay_layout.addWidget(food_text, alignment=Qt.AlignCenter)  # Добавляем текст в контейнер
 
         food_day_layout.addWidget(food_image)
-        food_day_layout.addWidget(food_text)
-        food_day_layout.addWidget(food_button)
         food_day_group.setLayout(food_day_layout)
 
         main_layout.addWidget(food_day_group)
 
         # Нижняя панель с кнопками
         button_layout = QHBoxLayout()
-        search_button = QPushButton(QIcon("images/buttonsearch.png"), "")
-        photo_button = QPushButton(QIcon("images/buttonphoto.png"), "")
+        search_button = QPushButton(QIcon("WebApp/images/buttonsearch.png"), "")
+        photo_button = QPushButton(QIcon("WebApp/images/buttonphoto.png"), "")
         button_layout.addWidget(search_button)
         button_layout.addWidget(photo_button)
 
@@ -54,7 +67,7 @@ class MainWindow(QWidget):
         # Кнопки меню
         menu_layout = QHBoxLayout()
         for i in range(1, 4):
-            menu_button = QPushButton(str(i))  # Исправлено: убран пробел
+            menu_button = QPushButton(str(i))
             menu_layout.addWidget(menu_button)
 
         main_layout.addLayout(menu_layout)
