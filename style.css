@@ -15,49 +15,43 @@ body {
     width: 100%; /* Изображение занимает всю ширину контейнера */
     height: auto;
 }
-#set {  
+
+#set, #them {  
     cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
+    width: 10%; /* Изменено с 50px на 10% */
+    height: 10%; /* Изменено с 50px на 10% */
     position: absolute; /* Абсолютное позиционирование текста */
     top: 25%; /* Центрирование по вертикали */
+}
+
+#set {
     left: 10%;
 }
+
 #them {
-    cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 25%; /* Центрирование по вертикали */
     left: 75%;
 }
 
-#set:hover {
-    background-color: rgb(235, 166, 6);
-}
-#them:hover {
-    background-color: rgb(235, 166, 6);
-}
-button:hover {
+#set:hover, #them:hover, button:hover {
     background-color: rgb(235, 166, 6); /* Изменение фона при наведении */
 }
+
 /*===================================================================================================================*/
 .content {
     text-align: center;
-    padding: 20px;   
+    padding: 5%; /* Изменено с 20px на 5% */
     position: relative;
-    width: 300px;
+    width: 90%; /* Изменено с 300px на 90% */
 }
 
-#df{
-    color: #000000
+#df {
+    color: #000000;
 }
-
 
 .foodday {
     position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
-    padding: 20px;
+    width: 90%; /* Изменено с 300px на 90% */
+    padding: 5%; /* Изменено с 20px на 5% */
 }
 
 .fon {
@@ -66,61 +60,53 @@ button:hover {
     z-index: 1;
 }
 
-.input{
+.input {
     position: relative;
     width: 100%;
-    padding: 20px;
+    padding: 5%; /* Изменено с 20px на 5% */
+}
+
+.overlay-text, .overlay_b, .overlay_p, .dayfot, .calories {
+    position: absolute; /* Абсолютное позиционирование текста */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 .overlay-text {
-    position: absolute; /* Абсолютное позиционирование текста */
     top: 10%; /* Центрирование по вертикали */
     left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-    z-index: 2;
+    font-size: 5vw; /* Изменено на относительный размер */
 }
 
 .overlay_b {
-    position: absolute; /* Абсолютное позиционирование текста */
     top: 75%; /* Центрирование по вертикали */
     left: 65%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-     /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    font-size: 5vw; /* Изменено на относительный размер */
 }
 
-.overlay_b:hover{
+.overlay_b:hover {
     color: rgb(245, 201, 99);
 }
 
 .overlay_p {
-    position: absolute; /* Абсолютное позиционирование текста */
     top: 20%; /* Центрирование по вертикали */
     left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 10px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    font-size: 4vw; /* Изменено на относительный размер */
 }
 
 .dayfot {
-    position: absolute; /* Абсолютное позиционирование текста */
     top: 35%; /* Центрирование по вертикали */
     left: 67%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования *//* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    font-size: 5vw; /* Изменено на относительный размер */
 }
+
 /*===================================================================================================================*/
 
 .header {
     position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
-    padding: 20px;
+    width: 90%; /* Изменено с 300px на 90% */
+    padding: 5%; /* Изменено с 20px на  5% */
 }
 
 #header {
@@ -128,32 +114,21 @@ button:hover {
     height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 
-.calories{
-    position: absolute; /* Абсолютное позиционирование текста */
+.calories {
     top: 60%; /* Центрирование по вертикали */
     left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 15px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-    z-index: 2;
+    font-size: 4vw; /* Изменено на относительный размер */
 }
-
 
 /*=====================================================================================*/
 
-
-
-
-
-
-/*==============================*/
-
-.footer {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-}
-.footer i {
-    font-size: 24px;
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    /* Изменения для мобильных устройств */
+    .content, .foodday, .header {
+        width: 80%; /* Уменьшаем ширину контейнеров */
+    }
+    .overlay-text, .overlay_b, .overlay_p, .dayfot, .calories {
+        font-size: 4vw; /* Уменьшаем размер текста */
+    }
 }
