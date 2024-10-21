@@ -1,0 +1,159 @@
+button img {
+    width: 20px; /* adjust the width and height to your liking */
+    height: 20px;
+    margin: 0 10px; /* add some margin around the image */
+}
+
+body {
+    margin: 0;
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Вертикальная ориентация */
+    align-items: stretch; /* Элементы будут растягиваться по ширине */
+}
+
+#header {
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    height: auto;
+}
+#set {  
+    cursor: pointer;
+    width: 50px; /* adjust the width and height to your liking */
+    height: 50px;
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 25%; /* Центрирование по вертикали */
+    left: 10%;
+}
+#them {
+    cursor: pointer;
+    width: 50px; /* adjust the width and height to your liking */
+    height: 50px;
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 25%; /* Центрирование по вертикали */
+    left: 75%;
+}
+
+#set:hover {
+    background-color: rgb(235, 166, 6);
+}
+#them:hover {
+    background-color: rgb(235, 166, 6);
+}
+button:hover {
+    background-color: rgb(235, 166, 6); /* Изменение фона при наведении */
+}
+/*===================================================================================================================*/
+.content {
+    text-align: center;
+    padding: 20px;   
+    position: relative;
+    width: 300px;
+}
+
+#df{
+    color: #000000
+}
+
+
+.foodday {
+    position: relative; /* Позволяет позиционировать дочерние элементы */
+    width: 300px; /* Ширина контейнера */
+    padding: 20px;
+}
+
+.fon {
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    z-index: 1;
+}
+
+.input{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.overlay-text {
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 10%; /* Центрирование по вертикали */
+    left: 20%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
+    color: white; /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 2;
+}
+
+.overlay_b {
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 75%; /* Центрирование по вертикали */
+    left: 65%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
+     /* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.overlay_b:hover{
+    color: rgb(245, 201, 99);
+}
+
+.overlay_p {
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 20%; /* Центрирование по вертикали */
+    left: 20%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
+    color: white; /* Цвет текста */
+    font-size: 10px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.dayfot {
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 35%; /* Центрирование по вертикали */
+    left: 67%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования *//* Цвет текста */
+    font-size: 20px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+}
+/*===================================================================================================================*/
+
+.header {
+    position: relative; /* Позволяет позиционировать дочерние элементы */
+    width: 300px; /* Ширина контейнера */
+    padding: 20px;
+}
+
+#header {
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.calories{
+    position: absolute; /* Абсолютное позиционирование текста */
+    top: 60%; /* Центрирование по вертикали */
+    left: 20%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
+    color: white; /* Цвет текста */
+    font-size: 15px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 2;
+}
+
+
+/*=====================================================================================*/
+
+
+
+
+
+
+/*==============================*/
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+.footer i {
+    font-size: 24px;
+}
