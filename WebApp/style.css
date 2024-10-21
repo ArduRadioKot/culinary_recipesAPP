@@ -157,3 +157,50 @@ button:hover {
 .footer i {
     font-size: 24px;
 }
+/* Добавляем медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    /* Изменяем стили для мобильных устройств */
+    .header {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .header img {
+      width: 100%;
+      height: auto;
+    }
+    
+    #set, #them {
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      left: 10px;
+    }
+    
+    .content {
+      padding: 10px;
+    }
+    
+    .foodday {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .foodday img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay-text, .overlay_p, .calories, .dayfot {
+      font-size: 14px;
+    }
+    
+    .input {
+      padding: 10px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  }
