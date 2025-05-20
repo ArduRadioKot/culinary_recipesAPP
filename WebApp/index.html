@@ -1,41 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарные рецепты</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class = "header">
-        <img src="images/Rectangle 2.png" alt="hrader" id = "header">
-        <img src="/WebApp/images/settingsmenue.png" alt="set" id="set">
-        <img src="/WebApp/images/settingsmenue.png" alt="them" id="them">
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <img src="images/Rectangle 2.png" alt="header" id="header">
+            <div class="header-buttons">
+                <button class="icon-button" id="set">
+                    <img src="/WebApp/images/settingsmenue.png" alt="settings">
+                </button>
+                <button class="icon-button" id="them">
+                    <img src="/WebApp/images/settingsmenue.png" alt="theme">
+                </button>
+            </div>
+        </div>
+    </header>
 
-    
-    <div class="content">
-        <h2  id="df">Блюдо дня</h2>
-    </div>
+    <main class="main-content">
+        <section class="content">
+            <h2 id="df">Блюдо дня</h2>
+        </section>
         
-    <div class="foodday">
-            
-            <img src ="images/Rectangle 4.png" class="fon">
-            <h2 class="overlay-text">Лазанья</h2>
-            <p class="overlay_p">Краткое описание</p>
-            <img src="images/Rectangle 5.png" alt="foodday" class="dayfot">
-            <p class="calories">Калорийность:</p>
-            <img src="images/Group 5.png" alt="go" class="overlay_b">
-    </div>
+        <section class="foodday">
+            <div class="foodday-background">
+                <img src="images/Rectangle 4.png" class="fon" alt="background">
+            </div>
+            <div class="foodday-content">
+                <div class="foodday-info">
+                    <h2 class="overlay-text">Загрузка...</h2>
+                    <p class="overlay_p">Пожалуйста, подождите</p>
+                    <p class="calories">Калорийность: загрузка...</p>
+                </div>
+                <div class="foodday-image">
+                    <img src="images/Rectangle 5.png" alt="Блюдо дня" class="dayfot" id="dayfot">
+                </div>
+            </div>
+            <button class="overlay_b">
+                <img src="images/Group 5.png" alt="Подробнее">
+            </button>
+        </section>
         
-    <div class="input">
-        <button id="ser"><img src="/images/buttonsearch.png"></button>
-        <button id="imgg"><img src="/images/buttonphoto.png"></button>  
-    </div>
+        <section class="search-section">
+            <div class="input">
+                <button id="ser" class="search-button">
+                    <img src="/images/buttonsearch.png" alt="Поиск">
+                </button>
+                <button id="imgg" class="photo-button">
+                    <img src="/images/buttonphoto.png" alt="Фото">
+                </button>
+            </div>
+        </section>
+    </main>
 
-    <div class="footer">
-        
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Кулинарные рецепты</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
