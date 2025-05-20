@@ -1,159 +1,310 @@
-button img {
-    width: 20px; /* adjust the width and height to your liking */
-    height: 20px;
-    margin: 0 10px; /* add some margin around the image */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --text-color: #2D3436;
+    --background-color: #F7F7F7;
+    --card-background: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
 }
 
 body {
-    margin: 0;
-    display: flex; /* Включаем Flexbox */
-    flex-direction: column; /* Вертикальная ориентация */
-    align-items: stretch; /* Элементы будут растягиваться по ширине */
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+    background-color: var(--card-background);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #header {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto;
-}
-#set {  
-    cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 25%; /* Центрирование по вертикали */
-    left: 10%;
-}
-#them {
-    cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 25%; /* Центрирование по вертикали */
-    left: 75%;
+    height: 40px;
+    width: auto;
 }
 
-#set:hover {
-    background-color: rgb(235, 166, 6);
+.header-buttons {
+    display: flex;
+    gap: 1rem;
 }
-#them:hover {
-    background-color: rgb(235, 166, 6);
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
-button:hover {
-    background-color: rgb(235, 166, 6); /* Изменение фона при наведении */
+
+.icon-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
-/*===================================================================================================================*/
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
 .content {
     text-align: center;
-    padding: 20px;   
-    position: relative;
-    width: 300px;
+    margin-bottom: 2rem;
 }
 
-#df{
-    color: #000000
+#df {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
-
+/* Food of the day section */
 .foodday {
-    position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
-    padding: 20px;
+    position: relative;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.foodday-background {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 .fon {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.input{
-    position: relative;
-    width: 100%;
-    padding: 20px;
+.foodday-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
+
+.foodday-info {
+    color: white;
+    max-width: 50%;
 }
 
 .overlay-text {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 10%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-    z-index: 2;
-}
-
-.overlay_b {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 75%; /* Центрирование по вертикали */
-    left: 65%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-     /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-}
-
-.overlay_b:hover{
-    color: rgb(245, 201, 99);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .overlay_p {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 20%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 10px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.calories {
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.foodday-image {
+    width: 250px;
+    height: 250px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .dayfot {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 35%; /* Центрирование по вертикали */
-    left: 67%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования *//* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-}
-/*===================================================================================================================*/
-
-.header {
-    position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
-    padding: 20px;
-}
-
-#header {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-}
-
-.calories{
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 60%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 15px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-    z-index: 2;
-}
-
-
-/*=====================================================================================*/
-
-
-
-
-
-
-/*==============================*/
-
-.footer {
-    position: relative;
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    object-fit: cover;
 }
-.footer i {
-    font-size: 24px;
+
+.overlay_b {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay_b:hover {
+    transform: scale(1.1);
+}
+
+.overlay_b img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Search section styles */
+.search-section {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.search-button, .photo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover, .photo-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.search-button img, .photo-button img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--card-background);
+    padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .foodday-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .foodday-info {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .foodday-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .overlay-text {
+        font-size: 1.5rem;
+    }
+
+    .overlay_p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-content {
+        padding: 0.5rem;
+    }
+
+    #header {
+        height: 30px;
+    }
+
+    .icon-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .foodday-background {
+        height: 200px;
+    }
+
+    .foodday-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .overlay-text {
+        font-size: 1.25rem;
+    }
+
+    .overlay_p {
+        font-size: 0.8rem;
+    }
+
+    .input {
+        gap: 1rem;
+    }
+
+    .search-button img, .photo-button img {
+        width: 24px;
+        height: 24px;
+    }
 }
