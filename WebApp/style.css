@@ -5,306 +5,213 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4ECDC4;
-    --text-color: #2D3436;
-    --background-color: #F7F7F7;
-    --card-background: #FFFFFF;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --border-radius: 12px;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f8f8f8;
 }
 
 /* Header styles */
 .header {
-    background-color: var(--card-background);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #header {
-    height: 40px;
-    width: auto;
-}
-
-.header-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.icon-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.icon-button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.icon-button img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Main content styles */
-.main-content {
-    flex: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
     width: 100%;
+    height: auto;
+    display: block;
 }
 
+#set, #them {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#set {
+    left: 20px;
+}
+
+#them {
+    right: 20px;
+}
+
+#set:hover, #them:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Content section styles */
 .content {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 #df {
-    font-size: 2rem;
-    color: var(--text-color);
-    font-weight: 700;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 /* Food of the day section */
 .foodday {
     position: relative;
-    background-color: var(--card-background);
-    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
-}
-
-.foodday-background {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .fon {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.foodday-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
-}
-
-.foodday-info {
-    color: white;
-    max-width: 50%;
+    height: auto;
+    display: block;
 }
 
 .overlay-text {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .overlay_p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-.calories {
-    font-size: 1rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-.foodday-image {
-    width: 250px;
-    height: 250px;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    max-width: 40%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .dayfot {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calories {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .overlay_b {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background: var(--primary-color);
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .overlay_b:hover {
     transform: scale(1.1);
 }
 
-.overlay_b img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Search section styles */
-.search-section {
-    background-color: var(--card-background);
-    border-radius: var(--border-radius);
-    padding: 1rem;
-    box-shadow: var(--shadow);
-}
-
+/* Search input section */
 .input {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
 }
 
-.search-button, .photo-button {
+.input button {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.search-button:hover, .photo-button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.input button:hover {
     transform: scale(1.1);
 }
 
-.search-button img, .photo-button img {
-    width: 32px;
-    height: 32px;
+.input button img {
+    width: 40px;
+    height: 40px;
 }
 
 /* Footer styles */
 .footer {
-    background-color: var(--card-background);
-    padding: 1rem;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--text-color);
+    margin-top: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
-    .main-content {
-        padding: 1rem;
-    }
-
-    .foodday-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .foodday-info {
-        max-width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .foodday-image {
-        width: 200px;
-        height: 200px;
+    .foodday {
+        width: 95%;
     }
 
     .overlay-text {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .overlay_p {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header-content {
-        padding: 0.5rem;
+        font-size: 14px;
+        max-width: 60%;
     }
 
-    #header {
-        height: 30px;
-    }
-
-    .icon-button img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .foodday-background {
-        height: 200px;
-    }
-
-    .foodday-image {
+    .dayfot {
         width: 150px;
         height: 150px;
     }
 
+    .calories {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .overlay-text {
-        font-size: 1.25rem;
+        font-size: 20px;
     }
 
     .overlay_p {
-        font-size: 0.8rem;
+        font-size: 12px;
+        max-width: 70%;
     }
 
-    .input {
-        gap: 1rem;
+    .dayfot {
+        width: 120px;
+        height: 120px;
     }
 
-    .search-button img, .photo-button img {
-        width: 24px;
-        height: 24px;
+    .calories {
+        font-size: 12px;
+    }
+
+    .input button img {
+        width: 30px;
+        height: 30px;
     }
 }
