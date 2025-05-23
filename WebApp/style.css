@@ -1,159 +1,405 @@
-button img {
-    width: 20px; /* adjust the width and height to your liking */
-    height: 20px;
-    margin: 0 10px; /* add some margin around the image */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    display: flex; /* Включаем Flexbox */
-    flex-direction: column; /* Вертикальная ориентация */
-    align-items: stretch; /* Элементы будут растягиваться по ширине */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #header {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
+    width: 100%;
     height: auto;
+    display: block;
 }
-#set {  
+
+#set, #them {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 25%; /* Центрирование по вертикали */
-    left: 10%;
+    transition: transform 0.3s ease;
 }
+
+#set {
+    left: 20px;
+}
+
 #them {
-    cursor: pointer;
-    width: 50px; /* adjust the width and height to your liking */
-    height: 50px;
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 25%; /* Центрирование по вертикали */
-    left: 75%;
+    right: 20px;
 }
 
-#set:hover {
-    background-color: rgb(235, 166, 6);
+#set:hover, #them:hover {
+    transform: translateY(-50%) scale(1.1);
 }
-#them:hover {
-    background-color: rgb(235, 166, 6);
-}
-button:hover {
-    background-color: rgb(235, 166, 6); /* Изменение фона при наведении */
-}
-/*===================================================================================================================*/
+
+/* Content section styles */
 .content {
-    text-align: center;
-    padding: 20px;   
-    position: relative;
-    width: 300px;
-}
-
-#df{
-    color: #000000
-}
-
-
-.foodday {
-    position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
     padding: 20px;
+    text-align: center;
+}
+
+#df {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Food of the day section */
+.foodday {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .fon {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    z-index: 1;
-}
-
-.input{
-    position: relative;
     width: 100%;
-    padding: 20px;
+    height: auto;
+    display: block;
 }
 
 .overlay-text {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 10%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-    z-index: 2;
-}
-
-.overlay_b {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 75%; /* Центрирование по вертикали */
-    left: 65%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-     /* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
-}
-
-.overlay_b:hover{
-    color: rgb(245, 201, 99);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 45%;
 }
 
 .overlay_p {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 20%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 10px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    max-width: 45%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
 }
 
 .dayfot {
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 35%; /* Центрирование по вертикали */
-    left: 67%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования *//* Цвет текста */
-    font-size: 20px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
 }
-/*===================================================================================================================*/
 
-.header {
-    position: relative; /* Позволяет позиционировать дочерние элементы */
-    width: 300px; /* Ширина контейнера */
+.calories {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.overlay_b {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.overlay_b:hover {
+    transform: scale(1.1);
+}
+
+/* Search input section */
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    gap: 20px;
 }
 
-#header {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+.input button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.calories{
-    position: absolute; /* Абсолютное позиционирование текста */
-    top: 60%; /* Центрирование по вертикали */
-    left: 20%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем текст для центрирования */
-    color: white; /* Цвет текста */
-    font-size: 15px; /* Размер шрифта */
-    text-align: center; /* Выравнивание текста по центру */
+.input button:hover {
+    transform: scale(1.1);
+}
+
+.input button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px;
+}
+
+/* Bottom Toolbar styles */
+.bottom-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.toolbar-item:hover {
+    background-color: #f0f0f0;
+}
+
+.toolbar-item.active {
+    background-color: #f0f0f0;
+}
+
+.toolbar-item.active span {
+    color: #000;
+}
+
+.toolbar-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.toolbar-item span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .foodday {
+        width: 95%;
+    }
+
+    .overlay-text {
+        font-size: 28px;
+    }
+
+    .overlay_p {
+        font-size: 14px;
+        max-width: 45%;
+    }
+
+    .dayfot {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .overlay-text {
+        font-size: 24px;
+    }
+
+    .overlay_p {
+        font-size: 12px;
+        max-width: 45%;
+    }
+
+    .dayfot {
+        width: 50%;
+    }
+
+    .input button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .toolbar-item {
+        padding: 6px 12px;
+    }
+    
+    .toolbar-item img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .toolbar-item span {
+        font-size: 10px;
+    }
+}
+
+/* FoodTok Styles */
+.foodtok-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: #000;
+}
+
+.recipe-card {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.recipe-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.recipe-content {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    z-index: 2;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.recipe-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.recipe-actions {
+    margin-top: 20px;
+}
+
+.cook-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cook-button:hover {
+    transform: scale(1.05);
+}
+
+.recipe-controls {
+    position: absolute;
+    right: 20px;
+    bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     z-index: 2;
 }
 
-
-/*=====================================================================================*/
-
-
-
-
-
-
-/*==============================*/
-
-.footer {
-    position: relative;
-    width: 100%;
-    padding: 20px;
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 }
-.footer i {
-    font-size: 24px;
+
+.control-button img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.control-button span {
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide scrollbar but keep functionality */
+.foodtok-container::-webkit-scrollbar {
+    display: none;
+}
+
+.foodtok-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Adjust bottom toolbar for FoodTok */
+.foodtok-container {
+    padding-bottom: 70px;
+}
+
+/* Add padding to the last recipe card to ensure content is visible */
+.recipe-card:last-child {
+    padding-bottom: 70px;
 }
