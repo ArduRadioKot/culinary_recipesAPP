@@ -9,7 +9,7 @@ async function getRandomDish() {
         // Преобразуем данные в нужный формат
         return {
             name: meal.strMeal,
-            description: meal.strInstructions.substring(0, 150) + '...', // Берем первые 150 символов описания
+            description: meal.strInstructions, // Возвращаем полное описание
             calories: '~' + Math.floor(Math.random() * 300 + 200) + ' ккал', // Примерная калорийность
             image: meal.strMealThumb
         };
