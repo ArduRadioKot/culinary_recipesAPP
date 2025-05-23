@@ -164,6 +164,51 @@ body {
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px;
+}
+
+/* Bottom Toolbar styles */
+.bottom-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.toolbar-item span {
+    font-size: 12px;
+    color: #666;
+}
+
+.toolbar-item.active {
+    background-color: #f0f0f0;
+}
+
+.toolbar-item.active span {
+    color: #000;
 }
 
 /* Media queries for responsive design */
@@ -213,5 +258,18 @@ body {
     .input button img {
         width: 30px;
         height: 30px;
+    }
+
+    .toolbar-item {
+        padding: 6px 12px;
+    }
+    
+    .toolbar-item img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .toolbar-item span {
+        font-size: 10px;
     }
 }
