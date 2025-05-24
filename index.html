@@ -5,64 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кулинарные рецепты</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <img src="images/Rectangle 2.png" alt="header" id="header">
-            <div class="header-buttons">
-                <button class="icon-button" id="set">
-                    <img src="/WebApp/images/settingsmenue.png" alt="settings">
-                </button>
-                <button class="icon-button" id="them">
-                    <img src="/WebApp/images/settingsmenue.png" alt="theme">
-                </button>
-            </div>
+            <button class="icon-button" id="settings">
+                <img src="images/settingsmenue.png" alt="Настройки">
+            </button>
+            <h1 class="logo">Кулинарные рецепты</h1>
+            <button class="icon-button" id="theme">
+                <img src="images/settingsmenue.png" alt="Тема">
+            </button>
         </div>
     </header>
 
     <main class="main-content">
-        <section class="content">
-            <h2 id="df">Блюдо дня</h2>
-        </section>
-        
-        <section class="foodday">
-            <div class="foodday-background">
-                <img src="images/Rectangle 4.png" class="fon" alt="background">
-            </div>
+        <div class="foodday">
+            <img src="images/Rectangle 4.png" class="fon" alt="Фон">
             <div class="foodday-content">
                 <div class="foodday-info">
-                    <h2 class="overlay-text">Загрузка...</h2>
-                    <p class="overlay_p">Пожалуйста, подождите</p>
+                    <h2 class="overlay-text">Блюдо дня</h2>
+                    <p class="overlay_p">Загрузка...</p>
                     <p class="calories">Калорийность: загрузка...</p>
+                    <button class="cook-btn">Готовить</button>
                 </div>
                 <div class="foodday-image">
-                    <img src="images/Rectangle 5.png" alt="Блюдо дня" class="dayfot" id="dayfot">
+                    <img src="images/Rectangle 5.png" alt="Блюдо дня" id="dayfot">
                 </div>
             </div>
-            <button class="overlay_b">
-                <img src="images/Group 5.png" alt="Подробнее">
+            <img src="images/Group 5.png" alt="Перейти" class="overlay_b">
+        </div>
+
+        <div class="search-buttons">
+        <a href="search.html">
+            <button class="search-btn" id="search-btn">
+                <img src="images/buttonsearch.png" alt="Поиск">
+                <span>Поиск</span>
             </button>
-        </section>
-        
-        <section class="search-section">
-            <div class="input">
-                <button id="ser" class="search-button">
-                    <img src="/images/buttonsearch.png" alt="Поиск">
-                </button>
-                <button id="imgg" class="photo-button">
-                    <img src="/images/buttonphoto.png" alt="Фото">
-                </button>
-            </div>
-        </section>
+        </a>
+        <a href="search.html">
+            <button class="search-btn" id="photo-btn">
+                <img src="images/buttonphoto.png" alt="Поиск по фото">
+                <span>По фото</span>
+            </button>
+        </a>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Кулинарные рецепты</p>
-        </div>
-    </footer>
+    <nav class="bottom-toolbar">
+        <a href="index.html" class="toolbar-item active">
+            <img src="images/home.png" alt="Главная">
+            <span>Главная</span>
+        </a>
+        <a href="search.html" class="toolbar-item">
+            <img src="images/search.png" alt="Поиск">
+            <span>Поиск</span>
+        </a>
+        <a href="foodTok.html" class="toolbar-item">
+            <img src="images/tiktok.png" alt="Режим">
+            <span>Режим</span>
+        </a>
+    </nav>
 
     <script src="script.js"></script>
 </body>
