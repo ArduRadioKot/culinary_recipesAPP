@@ -1,29 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Поиск рецептов</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class = "header">
-        <img src = "rectange 2.png" alt = "bac">
-        <button>options</button>
-        <button>theme</button>
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <button class="icon-button" id="settings">
+                <img src="images/settingsmenue.png" alt="Настройки">
+            </button>
+            <h1 class="logo">Поиск рецептов</h1>
+            <button class="icon-button" id="theme">
+                <img src="images/settingsmenue.png" alt="Тема">
+            </button>
+        </div>
+    </header>
 
-    <div class = "reciepts">
-        <fieldset class = "text">
-            <label for="ing">Ингридиент</label>
-            <input type = "text" name="ing" placeholder="ing">
-            <button>+</button>
-        </fieldset>
-    </div>
+    <main class="main-content">
+        <section class="search-section">
+            <div class="ingredients-search">
+                <div class="search-input-group">
+                    <input type="text" id="ingredient" placeholder="Введите ингредиент" class="search-input">
+                    <button class="add-ingredient">+</button>
+                </div>
+                <div class="selected-ingredients">
+                    <!-- Selected ingredients will be added here dynamically -->
+                </div>
+            </div>
 
-    <div class = "dmenue">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-    </div>
+            <div class="difficulty-filter">
+                <button class="difficulty-btn active" data-difficulty="easy">Легкий</button>
+                <button class="difficulty-btn" data-difficulty="medium">Средний</button>
+                <button class="difficulty-btn" data-difficulty="hard">Сложный</button>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-toolbar">
+        <a href="index.html" class="toolbar-item">
+            <img src="images/home.png" alt="Главная">
+            <span>Главная</span>
+        </a>
+        <a href="search.html" class="toolbar-item active">
+            <img src="images/search.png" alt="Поиск">
+            <span>Поиск</span>
+        </a>
+        <a href="foodTok.html" class="toolbar-item">
+            <img src="images/tiktok.png" alt="Режим">
+            <span>Режим</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
 </body>
 </html>
