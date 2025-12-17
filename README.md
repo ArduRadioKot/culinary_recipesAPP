@@ -1,77 +1,77 @@
-# Culinary_recipesAPP
+# culinary recipes app
 
 [EN README](README.md) | [RU README](READMERU.md) 
 
-## Что это?
-**Culinary_recipesAPP** - прототип приложения с случайными кулинарными рецептами.
+## What is it?
+**Culinary_recipesAPP** is an application for cooking dishes with fresh recipes.
 
 ![header](images/header.png)
 
-## ✨ Возможности
+## ✨ Opportunities
 
-- Случайный рецепт с каждым входом в приложение
-- Поиск рецептов
-- Сортировка рецептов по сложности
-- Режим ФудТок: можете смотреть рецепты в формате тик тока
+- Random recipe with each entry in the app
+- Search for recipes
+- Sort recipes by complexity
+- Foodtok mode: you can watch recipes in tiktok format
 
-## 🛠 Технологии
+## 🛠 Technologies
 
-- **HTML5** — разметка пользовательского интерфейса.
-- **CSS3** — стилизация и адаптивный дизайн сервиса.
-- **JavaScript** — логика приложения.
+- **HTML5** — disassembly of the user interface.
+- **CSS3** — Policy and responsive server design.
+- **JavaScript** — application logic.
 
-## Инструкции по установке  
+## Installation Instructions  
 
-Чтобы запустить EduTock локально, выполните следующие шаги:  
+To do the training locally, follow these steps:  
 
-1. **Клонируйте репозиторий**:  
-   ```bash  
-   git clone https://github.com/ArduRadioKot/EduTok.git  
+1. **Clone the repository**:
+`clone bash
+git clone https://github.com/ArduRadioKot/EduTok.git  
    cd EduTock  
    ```  
 
-2. **Откройте `index.html` в браузере**:  
-   Просто откройте файл `index.html` в современном браузере, чтобы начать пользоваться EduTock.  
+2. **Open it `index.html ` in the browser**:
+Just open the file `index.html `Anyway, in order to start using the tutorial.  
 
-## Установка как Веб приложение  
+## Install as a Web application  
 
-Чтобы установить EduTock как веб приложение:  
+What to install in the tutorial how do you like the app:  
 
-1. **Откройте сайт в поддерживаемом браузере** (например, Chrome, Safari).  
-2. **Нажмите**: "Добавить в закладки".  
-3. **Выберите**: "Добавить на главный экран".  
+1. **Open the website in a supported browser** (browser, Chrome, Safari).  
+2. **Press**: "Add to bookmarks".  
+3. **Choose**: "Add to Home screen".  
 
-## Структура проекта  
+## Project structure  
 ```  
-├── legasy/.              # Старая вресия приложения, новая находится в разработке
-├── WebApp/  
-|  ├── images/            # Папка с изображениями
-|  ├── index.html         # Основной HTML-файл  
-|  ├── script.js          # JavaScript-файл с логикой приложения  
-| ├── style.css           # CSS-файл для стилей  
-|  ├── foodtok.html       # Разметка сервиса foodTok
-|  ├── search.html        # Разметка страницы поиска
-└── README.md             # Документация проекта  
+,── legacy/.              # Old version of the application, a new one is under development
+,── Web application/  
+| ├── images/ # Folder with images
+| ├── index.html # A regular HTML file  
+| ├── script.js # JavaScript file with logical binding  
+| ├── style.css # CSS file for the page  
+| ├── foodtok.html # Overview of the food store "Serv"
+| ├── search.html # Overview of the traveling software
+,── README.md # Introductory program  
 ```  
 
-## Участие в разработке  
+## Participation in the development  
 
-Я приветствую ваш вклад в проект! Если хотети добавить новую фишку то
+I welcome your contribution to the project! If you want to add a new feature then
 
-1. Сделайте форк репозитория.  
-2. Создайте новую ветку для вашей функции или исправления.  
-3. Внесите изменения и закоммитьте их с описательными сообщениями.  
-4. Запушьте изменения в свой форк.  
-5. Откройте pull request в основной репозиторий.  
+1. Make a fork of the repository.  
+2. Create a new branch for your feature or fix.
+3. Make changes and commit them with descriptive messages.  
+4. Push the changes to your fork.  
+5. Open the pull request in the regular repository.  
 
-## Лицензия  
+## License  
 
-Этот проект распространяется под лицензией [GPL-2.0](LICENSE).
-
-
+This project is distributed under the [GPL-2.0] (LICENSE).
 
 
 
-## Programm has two versions - Android App and Web app
+
+
+##Programm has two versions - an Android app and a web app.
 https://arduradiokot.github.io/culinary_recipesAPP/
-Name programm - your search engine in the world of dish 
+Name programm, your search engine in the dish world.
